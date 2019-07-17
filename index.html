@@ -98,8 +98,6 @@ In order for a company to compete it must be agile - we call it the New Agile Co
 <b>Module 8 - Cloud Native Computing- Latest Developments Kubernetes etc</b>
 </ul>
 </li>
-
-
       <a href="https://drive.google.com/open?id=1BXQH7MZRtqc4Ndh2ZVxhnYODiETMMIiRbY56Vkwwyu8 "> 
       <i class="far fa-file-powerpoint"></i>  Learnings and Expected Outcomes
       </a>   
@@ -123,23 +121,22 @@ In order for a company to compete it must be agile - we call it the New Agile Co
            <i class="far fa-file-powerpoint"></i>  Slides by Eric Terrell
       </a><br>
       <a href="https://www.youtube.com/watch?v=NoBcX9mI3yU"> 
-          <i class="fas fa-video"></i> Video - Getting ahead in the cloud (Eric Terrell, Public Cloud Practice Manager, AHEAD)
-          <i> there are some good slides on the problem of keeping local data center busy. </i>
+          <i class="fas fa-video"></i> Video - Getting ahead in the cloud (Eric Terrell, Public Cloud Practice Manager, AHEAD) 
       </a><br>
+      <i> there are some good slides on the problem of keeping local data center busy. </i><br>
 
-    <h4>Exercise 1 - Design a Bread Maker</h4>
+    <h5>Exercise 1 - Design a Bread Maker</h5>
     
       <a href="https://drive.google.com/open?id=1ew6U5WT3OEryTlVY-bUalFczAIJ8W2nArLhkccndXwQ"> 
            <i class="far fa-file-powerpoint"></i>  Design a Bread Making Machine
-          <i> The idea here is a before vs after comparison. Students should spend about 20-30mins designing the bread making machine. They should not yet have heard about the power of collecting data about the device performance (IoT) or data on the customer. </i>
-      </a><br>
+      </a><br><i> The idea here is a before vs after comparison. Students should spend about 20-30mins designing the bread making machine. They should not yet have heard about the power of collecting data about the device performance (IoT) or data on the customer. </i><br>
      
-     
+     <h5> Exercise - Build a Web Site in GitHub</h5>
         <a href="https://drive.google.com/file/d/17CBdCJ0X_p8BvYvlvXqrddq52nNvdqQX/view"> 
-         <i class="far fa-file-powerpoint"></i>  Exercise 2 - Build a Web Site in GitHub
+         <i class="far fa-file-powerpoint"></i> Build a Web Site in GitHub
       </a><br>
         <a href="https://www.youtube.com/watch?v=790I-bCBSmM&t=697s"> 
-         <i class="fas fa-video"></i>   Build a Web Site in GitHub
+         <i class="fas fa-video"></i>   Video - Build a Web Site in GitHub
       </a><br>
       
  </p>
@@ -149,11 +146,15 @@ In order for a company to compete it must be agile - we call it the New Agile Co
   <h5 class="card-header">Module 2 - Big Data, Open Source Software and the Cloud  </h5>
     <h5>Web Servers and Web Sites</h5>
     The story of IoT is one of devices that gather data and connect to servers that aggregate that data into powerful data stores. We trace the rise of the Browser as a data integrator that allows us to scale our systems across the world. <br>
+    We show how to gather data from hundreds or thousands of sensors or to control those sensors just using a Web Servers.<br>
       At the same time we trace the effect of Open Source Software as a driver of rapid innovation. In particular we look at Node.js, JavaScript and NPM (Node Package Manager) in allowing companies to build powerful web platforms. <br>
 
     In our exercises we look the importance of Web Servers, URLs and Routes that allow us to connect to and control devices across the world. Using these we can control a camera in our home or in Hong Kong with the same ease - physical distance being no problem.<br>
+    We also look at two standards for communication, namely HTTP and Web Sockets. HTTP is a simple protocol, which is so small it can be written on a business card. It is the standard for communicating with a Browser to a Web Server. Its "header" contains information about the browser, the machine IP and port address that its sent from and the machine IP and port address of its destination. For security HTTPS also includes a mechanism for encryption, which makes communication more secure. The downside of HTTP and HTTPS is that its a fairly bulky header and therefore we often switch to Web Sockets once communication has been "set-up". <br>
+    In the exercise below we show how to set up a simple message server which can send messages to a group of people who only can communicate via their browser. <br>
+    
 
-    <h4>Exercise</h4>
+    <h5>Exercise</h5>
       <a href="https://www.youtube.com/watch?v=LUqRatX2mFU"> 
           <i class="fas fa-video"></i> Video - Now Go Build a Roti Maker (We now show the this video and ask them to redesign their bread making machine. Hopefully they have a hah-ha moment)
       </a><br>
@@ -167,12 +168,19 @@ In order for a company to compete it must be agile - we call it the New Agile Co
      <a href="https://youtu.be/gpjdu8pgORg"> 
           <i class="fas fa-video"></i> Video of PacMan Exercise
       </a><br>
- 
+      <a href="https://github.com/johntango/????"> 
+            <i class="fa fa-file-code"></i> Exercise - Chat Server using Web Sockets (fix this)
+    </a> <br>
+     <a href="https://youtu.be/gpjdu8pgORg"> 
+          <i class="fas fa-video"></i> Video of Chat Server (fix this)
+      </a><br>
 </div><br>
 <div class="card">
   <h5 class="card-header">Module 3 - Containers and Orchestration</h5>
-Containers, such as Docker allow users to run images that are independent of operating system. We will use Docker to download an image that already exists in DockerHub and run it in a Docker container on our laptop. 
-    <a href="https://drive.google.com/open?id=1OMaKZbqh1ZAUlt3MA9CpqSL799grezRzKIyaCCPtXLs"> 
+Containers, such as Docker allow users to run images that are independent of operating system. We will use Docker to download an image that already exists in DockerHub and run it in a Docker container on our laptop. This means that anyone can now distribute their code by creating a Docker image. This image can run on any operating system because it will run in a standardized Docker container. <br>
+Now suppose I want to set up several docker containers (lets say 3 containers called A, B and C) on my laptop all running the same code and I want them to all communicate, say on port 3000. If you think about it, this raises a problem. The message header from any container will contain the machine name and the port number. But my machine only has one port 3000 so how does it know which container is its correct destination? The answer is that each container can map its port 3000 to different machine level ports. So container A port 3000 --> 8001, B port 3000 --> 8002, and C port 3000 --> 8003.  So a message address to IP X:8002 will go to container B port 3000. This mapping is done in the Dockerfile and its a very powerful mechanism for testing code. (maybe an Exercise on this would be good).<br>    
+
+<a href="https://drive.google.com/open?id=1OMaKZbqh1ZAUlt3MA9CpqSL799grezRzKIyaCCPtXLs"> 
     <i class="far fa-file-powerpoint"></i> Overview of Docker Containers
       </a><br>
 
@@ -223,10 +231,6 @@ Containers, such as Docker allow users to run images that are independent of ope
           </a><br>
 
     </div><br>
-
-
-     
-
 </div><br>
 
 <div class="card">
@@ -248,7 +252,11 @@ The history of DevOps has its roots in manufacturing, going back to the Toyota P
     </a><br>
 
 </div><br>
-
+<div class="card">
+  <h5 class="card-header">Module 5 – DevOpsTest,  DevOpsSec  (the story of Microsoft, Level 1, Level 2,…) </h5>
+  How do we test in the cloud? How do we test in containers in the cloud? <br>
+  <h5>Exercise Circle CI Push to GitHug and use Circle CI to test</h5>
+</div><br>
 
 <div class="card">
   <h5 class="card-header">Module 6 - Serverless </h5>

@@ -8,7 +8,7 @@
 <title>Cloud · Digital Transformation</title>
 
 <!-- Bootstrap core CSS -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="starter-template.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
@@ -108,6 +108,7 @@ In order for a company to compete it must be agile - we call it the New Agile Co
 
 <div class="card">
   <h5 class="card-header">Module 1 - Into the Cloud </h5>
+  <div class="card-body">
 
      The story of getting to the Cloud <br>
      What are the business drivers and technologies that have led to the Digital Transformation that is driving us to the Cloud. We follow the rise of the internet and the contributions of Sir Tim in developing the World Wide Web that triggered IoT and the tidal wave of data. He wanted to make the data from CERN visible to others across the world. By devising HTML the markup languate and HTTP the protocol layered on TCP he made this widely successful. <br>
@@ -140,10 +141,13 @@ In order for a company to compete it must be agile - we call it the New Agile Co
       </a><br>
       
  </p>
-</div><br>
+ </div>
+</div>
+<br>
 
 <div class="card">
   <h5 class="card-header">Module 2 - Big Data, Open Source Software and the Cloud  </h5>
+  <div class="card-body">  
     <h5>Web Servers and Web Sites</h5>
     The story of IoT is one of devices that gather data and connect to servers that aggregate that data into powerful data stores. We trace the rise of the Browser as a data integrator that allows us to scale our systems across the world. <br>
     We show how to gather data from hundreds or thousands of sensors or to control those sensors just using a Web Servers.<br>
@@ -174,9 +178,12 @@ In order for a company to compete it must be agile - we call it the New Agile Co
      <a href="https://youtu.be/gpjdu8pgORg"> 
           <i class="fas fa-video"></i> Video of Chat Server (fix this)
       </a><br>
+</div>
 </div><br>
+
 <div class="card">
   <h5 class="card-header">Module 3 - Containers and Orchestration</h5>
+    <div class="card-body">
 Containers, such as Docker allow users to run images that are independent of operating system. We will use Docker to download an image that already exists in DockerHub and run it in a Docker container on our laptop. This means that anyone can now distribute their code by creating a Docker image. This image can run on any operating system because it will run in a standardized Docker container. <br>
 Now suppose I want to set up several docker containers (lets say 3 containers called A, B and C) on my laptop all running the same code and I want them to all communicate, say on port 3000. If you think about it, this raises a problem. The message header from any container will contain the machine name and the port number. But my machine only has one port 3000 so how does it know which container is its correct destination? The answer is that each container can map its port 3000 to different machine level ports. So container A port 3000 --> 8001, B port 3000 --> 8002, and C port 3000 --> 8003.  So a message address to IP X:8002 will go to container B port 3000. This mapping is done in the Dockerfile and its a very powerful mechanism for testing code. (maybe an Exercise on this would be good).<br>    
 
@@ -235,6 +242,7 @@ Now suppose I want to set up several docker containers (lets say 3 containers ca
 
 <div class="card">
   <h5 class="card-header">Module 4 - DevOps</h5>
+    <div class="card-body">
 There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. Quote by C.A.R. Hoare, 1980 ACM Turing Award Lecture<br>
 Today software development has moved from designers throwing their software "over-the-wall" to testers and the testers repeating the process with software operations. Now these roles are disappearing and there are just software engineers who design, test and deploy their software. <br>
 In order to simplify the complexity of the product designers strip it down to the <b>Minimal Viable Product. They don’t put in any feature that is not absolutely necessary. </b><br>
@@ -255,10 +263,12 @@ The history of DevOps has its roots in manufacturing, going back to the Toyota P
     <a href="https://drive.google.com/open?id=1Rg0WkF467OkCAzWqB49c5-4Bv6v8AZW1jWaxVhbgA0I"> 
           <i class="far fa-file-powerpoint"></i> Software Architecting Principles (Roger Sessions and Loose Coupling Architectures)
     </a><br>
-
+</div>
 </div><br>
+
 <div class="card">
   <h5 class="card-header">Module 5 – DevOpsTest,  DevOpsSec  (the story of Microsoft, Level 1, Level 2,…) </h5>
+  <div class="card-body">  
   How do we test in the cloud? How do we test in containers in the cloud? <br>
   <a href="https://youtu.be/iJkI8PwlxR4"> 
           <i class="fas fa-video"></i>  Case Study of Microsoft Testing in the Cloud
@@ -268,21 +278,26 @@ The history of DevOps has its roots in manufacturing, going back to the Toyota P
     </a><br>
 
   <h5>Exercise Circle CI Push to GitHug and use Circle CI to test</h5>
-</div><br>
+</div>
+</div>
+<br>
 
 <div class="card">
   <h5 class="card-header">Module 6 - Serverless </h5>
   This show how to use Serverless Lambda functions on AWS to read and write (CRUD) to the DynamoDB.
+  <div class="card-body">  
     <a href="https://github.com/johntango/awsApiCrudDyanamo.git"> 
       <i class="far fa-file-code"></i></i> AWS Serverless Lambda Functions performing CRUD operations on DynamoDB  
     </a> <br>
     <a href="https://www.youtube.com/watch?v=rtuaERYAxh8&t=21s"> 
           <i class="fas fa-video"></i> Video AWS Serverless Lambda Functions 
     </a><br>
+</div>
 </div><br>
 
 <div class="card">
   <h5 class="card-header">Module 7 - The Agile Corporation </h5>
+  <div class="card-body">
 For the last hundred years companies have been applying optimization techniques to improve their "core" business. Today over 50% of the FT 500 companies from 2000 are gone. Will your company be next? Remember size is no defense. General Electric is stumbling, BlackBerry is gone as is Nokia, a $150 billion corporation. <br>
 One major insight is that data is the new "gold". Every company needs data about its products, and how they perform. Every company needs data about its customers. <br>
 As we saw in the bread making exercise, product design is not just about the physical entity, its also about the embedded chips which monitor the product and send data back to the manufacturer. Its about understanding how your customer uses your product and how they would like your product to perform. <br>
@@ -293,10 +308,12 @@ In order for a company to compete it must be agile - we call it the New Agile Co
           <i class="far fa-file-powerpoint"></i> Agile Corporation
   </a><br>
 
+</div>
 </div><br>
 
 <div class="card">
   <h5 class="card-header">Module 8 - Cloud Native Computing </h5>
+  <div class="card-body">  
  Kubernetes, Monitoring in the Cloud, The Microsoft Testing Story, Quality Software, Sample Cloud Architectures
     <h4>Exercise</h4>
       <a href="https://drive.google.com/open?id=1UWFRdNOnHLt9QzYGZiyka_g-A5EKlOciFWx8a1QcwfI"> 
@@ -306,12 +323,13 @@ In order for a company to compete it must be agile - we call it the New Agile Co
       <a href="https://www.youtube.com/watch?v=k4pGFxjy-bA&t=204s"> 
         <i class="fas fa-video"></i> AWS Kubernetes Video 
         </a> <br>
+</div>        
 </div><br>
 
 
 <div class="card">
   <h5 class="card-header">AWS Exercises</h5>
-     
+  <div class="card-body">     
     This is putting up a web page on AWS S3 storage. This is a static web site. It would be a good follow on to using GitHub to host a static web site. <br>
     <a href="https://github.com/johntango/awsS3BucketWebSite"> 
     <i class="fa fa-file-code"></i> Static Web Site from AWS S3 storage 
@@ -340,7 +358,7 @@ In order for a company to compete it must be agile - we call it the New Agile Co
       </a><br>
 
   
-
+</div>
 </div><br>
 
 
@@ -378,7 +396,19 @@ In order for a company to compete it must be agile - we call it the New Agile Co
       </a>
         
     </div>
-</div>
+</div><br>
+
+<div class="card">
+  <h5 class="card-header">Sample Modal Video </h5>
+  <div class="card-body">
+
+    <h5>Stablecoins</h5>      
+    <button type="button" class="btn btn-link mx-0 px-0" onclick="showVideo('ctMIdpm2j4I')"> <i class="fas fa-video"></i> Mini Lecture
+    </button>
+        
+  </div>
+</div><br>
+
 
 
 <!-- START: sample lecture -->
@@ -412,7 +442,14 @@ In order for a company to compete it must be agile - we call it the New Agile Co
 
 </main><!-- /.container -->
 
+<!-- div is a placeholder for video -->
+<div id='video'></div>
 
-<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./assets/js/elements.js"></script>
+<script src="./assets/js/video.js"></script>
+
 </body>
 </html>

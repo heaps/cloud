@@ -35,3 +35,30 @@ class ModalVideo extends HTMLElement {
 
 }
 customElements.define('modal-video', ModalVideo);
+
+
+// go-video is a short forms of the bootstrap tag
+// ----------------------------------------------------
+
+class GoVideo extends HTMLElement {
+constructor() {
+  super();
+}
+
+connectedCallback() {
+  // read video data
+  var vid   = this.getAttribute('vid');
+  var title = this.innerHTML;
+
+  this.innerHTML = `
+      <button type="button" class="btn btn-link mx-0 px-0" onclick="showVideo('${vid}')"> 
+        <i class="fas fa-video"></i> ${title}
+      </button> <br>`;    
+}
+
+}
+customElements.define('go-video', GoVideo);
+
+
+
+
